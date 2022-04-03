@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="selector">
+    <select (change)="selectChangeHandler($event)">
+      <option value="column-1">Kolumna 1</option>
+      <option value="column-2">Kolumna 2</option>
+      <option value="column-3">Kolumna 3</option>
+      <option value="column-4">Kolumna 4</option>
+    </select>
+  </div>
+  <div class="distinct">
+    <div>Distinct:</div>
+
+    <app-table *ngFor="let table of tablesDistinct" [table]="table"></app-table>
+  </div>
+
+  <div class="repeated">
+    <div>Repeated:</div>
+
+    <app-table *ngFor="let table of tablesRepeated" [table]="table"></app-table>
+  </div>
+</div>
